@@ -4,9 +4,9 @@
  */
 const CONFIG = {
   API_BASE: (localStorage.getItem('jo_api_base') || '').trim() || 'http://localhost:10000/api',
-  WHATSAPP_NUMBER: '919999999999', // TODO: replace with store WhatsApp number, e.g. 919876543210
+  WHATSAPP_NUMBER: '919667686471',
   STORE_ADDRESS: 'Shop No. 12, Main Market, Near Bus Stand, Your City – 110001',
-  STORE_PHONE: '+91 99999 99999',
+  STORE_PHONE: '+91 96676 86471',
 };
 
 const LENSES = [
