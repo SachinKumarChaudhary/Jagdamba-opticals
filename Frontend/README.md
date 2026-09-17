@@ -16,7 +16,7 @@ Premium optical-store frontend per `prd.md` (see `/sdcard/jagdambaopticals/prd.m
 ## Config (top of `script.js`)
 ```js
 API_BASE: 'http://localhost:10000/api' // set to Render URL in prod
-WHATSAPP_NUMBER: '919999999999' // TODO: store number
+WHATSAPP_NUMBER: '919667686471' // TODO: store number
 STORE_ADDRESS, STORE_PHONE
 ```
 
