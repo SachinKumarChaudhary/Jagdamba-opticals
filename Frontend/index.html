@@ -3,133 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jagdamba Optical - Premium eyewear, sunglasses, lenses and computer glasses." />
-  <title>Jagdamba Optical | See the World More Clearly</title>
+  <meta name="description" content="Jagdamba Optical - Premium eyeglasses, sunglasses, lenses. See Better. Look Better." />
+  <title>Jagdamba Optical | See Better. Look Better.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="topbar">
-    <div>🚚 Free Shipping on Orders Above ₹999</div>
-    <div>🛡️ 100% Original Products</div>
-    <div>↻ 7 Days Return</div>
-    <div>✓ 1 Year Warranty</div>
-    <div>⌖ Store Locator</div>
-    <div>▣ Track Order</div>
-    <div>❓ Help & Support</div>
+    <span>🚚 Free Shipping Above ₹999</span>
+    <span class="hide-m">🛡️ 100% Original</span>
+    <span class="hide-m">↻ 7 Days Return</span>
+    <span class="hide-s">📱 WhatsApp: <b id="topWa">+91 99999 99999</b></span>
   </div>
 
-  <header class="header">
-    <a class="logo" href="#">
+  <header class="header" id="home">
+    <a class="logo" href="#home" aria-label="Jagdamba Optical home">
       <span class="logo-mark">♕</span>
       <span><b>JAGDAMBA</b><small>OPTICAL</small></span>
     </a>
-
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#shop" data-cat="eyeglasses">Eyeglasses</a>
+      <a href="#shop" data-cat="sunglasses">Sunglasses</a>
+      <a href="#lenses">Lenses</a>
+      <a href="#about">About Us</a>
+      <a href="#store">Contact</a>
+    </nav>
     <div class="search">
-      <input id="searchInput" type="search" placeholder="Search frames, sunglasses, lenses..." />
+      <input id="searchInput" type="search" placeholder="Search frames, brands, shapes..." autocomplete="off" />
       <button aria-label="Search">⌕</button>
     </div>
-
     <div class="header-actions">
-      <button>♡<span>Wishlist</span></button>
-      <button>⇄<span>Compare</span></button>
-      <button>♙<span>Account</span></button>
-      <button class="cart-btn" id="cartButton">🛒 <span>Cart</span><i id="cartCount">0</i></button>
+      <button id="wishlistBtn" aria-label="Wishlist">♡<span>Wishlist</span><i id="wishCount" class="badge-count hidden">0</i></button>
+      <button id="cartButton" class="cart-btn" aria-label="Cart">🛒 <span>Cart</span><i id="cartCount">0</i></button>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <nav class="nav">
-    <a href="#eyeglasses">EYEGLASSES <span>⌄</span></a>
-    <a href="#sunglasses">SUNGLASSES <span>⌄</span></a>
-    <a href="#kids">KIDS <span>⌄</span></a>
-    <a href="#computer">COMPUTER GLASSES <span>⌄</span></a>
-    <a href="#lenses">LENSES <span>⌄</span></a>
-    <a href="#brands">BRANDS <span>⌄</span></a>
-    <a class="offer" href="#offers">OFFERS</a>
-    <a href="#new">NEW ARRIVALS</a>
-  </nav>
-
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">SEE THE WORLD</p>
-        <h1>MORE CLEARLY</h1>
-        <p class="hero-sub">Premium Frames <b>•</b> Advanced Lenses <b>•</b> Trusted Service</p>
+        <p class="eyebrow">JAGDAMBA OPTICAL</p>
+        <h1>See Better.<br/>Look Better.</h1>
+        <p class="hero-sub">Premium Eyewear for Every Style. Frames • Sunglasses • Lenses</p>
         <div class="hero-buttons">
-          <a href="#products" class="btn primary">EXPLORE FRAMES</a>
-          <a href="#lenses" class="btn secondary">SHOP BY POWER</a>
+          <a href="#shop" class="btn primary" data-cat-link="eyeglasses">Shop Eyeglasses</a>
+          <a href="#shop" class="btn secondary" data-cat-link="sunglasses">Explore Sunglasses</a>
         </div>
-        <div class="benefits">
-          <div><strong>♢</strong><span><b>100% Original</b><small>Authentic Products</small></span></div>
-          <div><strong>▱</strong><span><b>Free Shipping</b><small>Above ₹999</small></span></div>
-          <div><strong>◉</strong><span><b>1 Year Warranty</b><small>On All Frames</small></span></div>
-          <div><strong>↻</strong><span><b>7 Days Return</b><small>Easy Return Policy</small></span></div>
-          <div><strong>♧</strong><span><b>Expert Support</b><small>24x7 Assistance</small></span></div>
+        <div class="hero-meta">
+          <span>⭐ 4.8 rated by 2,000+ customers</span>
+          <span>👓 1000+ styles • Free eye test in store</span>
         </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=900&q=80" alt="Premium eyewear" />
+        <div class="hero-card"><b>Ray-Ban Style Frame</b><span>₹1,499 • ⭐ 4.8</span></div>
       </div>
     </section>
 
-    <section class="category-strip" id="eyeglasses">
-      <a class="category-card" href="#products"><img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=500&q=80"><span><b>Eyeglasses</b><small>Wide Range of Frames</small></span></a>
-      <a class="category-card" href="#sunglasses"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=500&q=80"><span><b>Sunglasses</b><small>UV Protected Styles</small></span></a>
-      <a class="category-card" href="#kids"><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=500&q=80"><span><b>Kids Collection</b><small>Stylish & Safe</small></span></a>
-      <a class="category-card" href="#computer"><img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=500&q=80"><span><b>Computer Glasses</b><small>Blue Light Protection</small></span></a>
-      <a class="category-card" href="#lenses"><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=500&q=80"><span><b>Contact Lenses</b><small>Comfort All Day</small></span></a>
-      <a class="category-card" href="#lenses"><img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=500&q=80"><span><b>Lens Options</b><small>All Types Available</small></span></a>
-    </section>
-
-    <section class="products-section" id="products">
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
       <div class="section-heading">
-        <div><p class="section-kicker">TRENDING NOW</p><h2>Popular Eyewear</h2></div>
-        <a href="#products">View All →</a>
+        <div><p class="section-kicker">SHOP BY CATEGORY</p><h2>Find your perfect pair</h2></div>
       </div>
-      <div class="product-grid" id="productGrid"></div>
+      <div class="category-grid">
+        <button class="category-card" data-cat="eyeglasses"><img loading="lazy" src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=500&q=80" alt="Eyeglasses"/><span><b>👓 Eyeglasses</b><small>Round • Square • Rectangle</small></span></button>
+        <button class="category-card" data-cat="sunglasses"><img loading="lazy" src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=500&q=80" alt="Sunglasses"/><span><b>🕶️ Sunglasses</b><small>UV protected styles</small></span></button>
+        <button class="category-card" data-cat="lenses"><img loading="lazy" src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=500&q=80" alt="Lenses"/><span><b>🔬 Lenses</b><small>Blue-cut • Progressive</small></span></button>
+        <button class="category-card" data-cat="kids"><img loading="lazy" src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=500&q=80" alt="Kids"/><span><b>👶 Kids Eyewear</b><small>Stylish &amp; safe</small></span></button>
+      </div>
     </section>
 
-    <section class="promo-grid" id="offers">
-      <article class="promo dark">
-        <div><p>BLUE LIGHT PROTECTION</p><h2>For Your Digital Life</h2><small>Starting at ₹799</small><a href="#computer" class="btn primary">SHOP NOW</a></div>
-        <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=900&q=85">
-      </article>
-      <article class="promo light">
-        <div><p>UP TO</p><h2>50% OFF</h2><small>ON SELECTED FRAMES</small><a href="#products" class="btn dark-btn">SHOP OFFERS</a></div>
-        <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=900&q=85">
-      </article>
-      <article class="lens-panel" id="lenses">
-        <div class="section-heading"><div><p class="section-kicker">PREMIUM LENS OPTIONS</p></div><a href="#lenses">View All →</a></div>
-        <div class="lens-grid">
-          <div>◯<b>Single Vision</b><small>Starting ₹599</small></div>
-          <div>☼<b>Anti-Glare</b><small>Starting ₹899</small></div>
-          <div>▣<b>Blue Cut</b><small>Starting ₹999</small></div>
-          <div>☀<b>Photochromic</b><small>Starting ₹1,299</small></div>
-          <div>◉<b>Progressive</b><small>Starting ₹1,999</small></div>
+    <!-- FEATURED -->
+    <section class="section gray" id="featured">
+      <div class="section-heading">
+        <div><p class="section-kicker">TRENDING NOW</p><h2>Featured Products</h2></div>
+        <button class="link" data-goto-shop>View All →</button>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <!-- SHOP / LISTING + FILTERS -->
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div><p class="section-kicker">CATALOGUE</p><h2 id="shopTitle">Eyeglasses</h2></div>
+        <div class="shop-tools">
+          <div class="tabs" id="catTabs">
+            <button data-cat="all" class="active">All</button>
+            <button data-cat="eyeglasses">Eyeglasses</button>
+            <button data-cat="sunglasses">Sunglasses</button>
+            <button data-cat="kids">Kids</button>
+            <button data-cat="lenses">Lenses</button>
+          </div>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="popular">Sort: Popular</option>
+            <option value="low">Price: Low → High</option>
+            <option value="high">Price: High → Low</option>
+            <option value="new">New Arrivals</option>
+          </select>
         </div>
-      </article>
+      </div>
+      <div class="shop-layout">
+        <aside class="filters" id="filters">
+          <div class="filter-head"><h3>Filters</h3><button id="clearFilters">Clear all</button></div>
+          <div class="filter-group"><h4>Gender</h4><label><input type="checkbox" name="gender" value="Men"/> Men</label><label><input type="checkbox" name="gender" value="Women"/> Women</label><label><input type="checkbox" name="gender" value="Kids"/> Kids</label></div>
+          <div class="filter-group"><h4>Frame Shape</h4><label><input type="checkbox" name="shape" value="Round"/> Round</label><label><input type="checkbox" name="shape" value="Square"/> Square</label><label><input type="checkbox" name="shape" value="Rectangle"/> Rectangle</label><label><input type="checkbox" name="shape" value="Aviator"/> Aviator</label><label><input type="checkbox" name="shape" value="Cat Eye"/> Cat Eye</label></div>
+          <div class="filter-group"><h4>Price</h4><label><input type="radio" name="price" value=""/> All</label><label><input type="radio" name="price" value="under999"/> Under ₹999</label><label><input type="radio" name="price" value="999-1999"/> ₹999–₹1,999</label><label><input type="radio" name="price" value="2000plus"/> ₹2,000+</label></div>
+          <div class="filter-group"><h4>Frame Material</h4><label><input type="checkbox" name="material" value="Metal"/> Metal</label><label><input type="checkbox" name="material" value="Plastic"/> Plastic</label><label><input type="checkbox" name="material" value="Acetate"/> Acetate</label></div>
+          <div class="filter-group"><h4>Brand</h4><div id="brandFilters"></div></div>
+          <div class="filter-group"><h4>Color</h4><div id="colorFilters" class="color-row"></div></div>
+        </aside>
+        <div>
+          <p class="result-count" id="resultCount"></p>
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </div>
     </section>
 
-    <section class="trust-row" id="brands">
-      <div>◉<b>FREE EYE TEST</b><small>At All Stores</small></div>
-      <div>▱<b>WIDE RANGE</b><small>1000+ Styles</small></div>
-      <div>♧<b>CUSTOM FITTING</b><small>Perfect Comfort</small></div>
-      <div>▤<b>EASY EMI</b><small>On Credit Cards</small></div>
-      <div>⌖<b>STORE LOCATOR</b><small>Find Nearest Store</small></div>
-      <div>●<b>WHATSAPP SUPPORT</b><small>Chat With Us</small></div>
+    <!-- LENSES -->
+    <section class="section gray" id="lenses">
+      <div class="section-heading"><div><p class="section-kicker">OUR LENS SOLUTIONS</p><h2>Lenses for every need</h2></div></div>
+      <div class="lens-grid" id="lensGrid"></div>
     </section>
 
-    <section class="newsletter" id="new">
-      <div><p class="section-kicker">JAGDAMBA OPTICAL</p><h2>Better vision. Better style.</h2><p>Get new arrivals, offers and eyewear tips directly in your inbox.</p></div>
-      <form id="newsletterForm"><input type="email" placeholder="Enter your email" required><button class="btn primary">SUBSCRIBE</button></form>
+    <!-- STORE -->
+    <section class="section" id="store">
+      <div class="section-heading"><div><p class="section-kicker">VISIT US</p><h2>Visit Jagdamba Optical</h2></div></div>
+      <div class="store-grid">
+        <div class="store-card">
+          <p>📍 <b>Address</b><br/><span id="storeAddress">Shop No. 12, Main Market, Near Bus Stand, Your City – 110001</span></p>
+          <p>📞 <b>Phone</b><br/><a id="storePhone" href="tel:+919999999999">+91 99999 99999</a></p>
+          <p>📱 <b>WhatsApp</b><br/><a id="storeWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+          <p>🕐 <b>Opening Hours</b><br/>Mon–Sat: 10am–8:30pm • Sun: 11am–6pm</p>
+          <p>📧 <b>Email</b><br/><a href="mailto:care@jagdambaoptical.com">care@jagdambaoptical.com</a></p>
+          <div class="row"><a class="btn primary" id="directionsBtn" href="#" target="_blank" rel="noopener">Get Directions</a><a class="btn secondary" href="#contact">Enquire</a></div>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Jagdamba Optical map" loading="lazy" src="https://www.google.com/maps?q=Connaught+Place+New+Delhi&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section gray" id="about">
+      <div class="section-heading"><div><p class="section-kicker">ABOUT US</p><h2>Trusted eyewear, honest prices</h2></div></div>
+      <p class="about-text">Jagdamba Optical is a neighbourhood optical store with premium frames, genuine lenses and free eye-test support. We help you pick the right frame for your face, fit it perfectly, and service it after sale. Lenskart-inspired range, with our own personal service.</p>
+      <div class="trust-row">
+        <div>◉<b>FREE EYE TEST</b><small>At store</small></div>
+        <div>▱<b>1000+ STYLES</b><small>Wide range</small></div>
+        <div>♧<b>CUSTOM FITTING</b><small>Perfect comfort</small></div>
+        <div>●<b>WHATSAPP SUPPORT</b><small>Fast replies</small></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-heading"><div><p class="section-kicker">CONTACT</p><h2>Send an enquiry</h2></div></div>
+      <form id="enquiryForm" class="enquiry-form">
+        <input name="name" required placeholder="Your name" />
+        <input name="phone" placeholder="Phone / WhatsApp" />
+        <input name="email" type="email" placeholder="Email (optional)" />
+        <textarea name="message" required placeholder="Which product / lens are you interested in?"></textarea>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+        <p class="form-note">Submits to store API when online, else opens WhatsApp.</p>
+      </form>
     </section>
   </main>
 
   <footer>
     <div class="footer-brand"><div class="logo"><span class="logo-mark">♕</span><span><b>JAGDAMBA</b><small>OPTICAL</small></span></div><p>Premium eyewear with trusted service.</p></div>
-    <div><h4>SHOP</h4><a href="#eyeglasses">Eyeglasses</a><a href="#sunglasses">Sunglasses</a><a href="#kids">Kids</a><a href="#computer">Computer Glasses</a></div>
-    <div><h4>HELP</h4><a href="#">Contact Us</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Warranty</a></div>
-    <div><h4>FOLLOW</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a><a href="#">WhatsApp</a></div>
+    <div><h4>SHOP</h4><button data-cat="eyeglasses">Eyeglasses</button><button data-cat="sunglasses">Sunglasses</button><button data-cat="kids">Kids</button><button data-cat="lenses">Lenses</button></div>
+    <div><h4>HELP</h4><a href="#store">Contact Us</a><a href="#store">Store Location</a><a href="#lenses">Lens Guide</a><a href="#contact">Support</a></div>
+    <div><h4>STORE</h4><span id="footPhone">+91 99999 99999</span><span>Mon–Sat 10–8:30</span><a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp Us</a></div>
   </footer>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal hidden" id="productModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-grid">
+        <div class="modal-media"><img id="mImg" src="" alt="Product"/><div class="thumb-row" id="mThumbs"></div></div>
+        <div class="modal-info">
+          <p class="brand" id="mBrand"></p>
+          <h3 id="mName"></h3>
+          <p class="rating" id="mRating"></p>
+          <p class="price-line"><span class="price" id="mPrice"></span> <span class="old" id="mOld"></span> <span class="discount" id="mOff"></span></p>
+          <p class="meta" id="mCode"></p>
+          <div class="colors"><span>Available Colors:</span><div id="mColors"></div></div>
+          <div class="specs" id="mSpecs"></div>
+          <div class="row wrap">
+            <button class="btn secondary" id="mWish">♡ Wishlist</button>
+            <button class="btn primary" id="mCart">🛒 Add to Cart</button>
+            <a class="btn wa" id="mWa" href="#" target="_blank" rel="noopener">📱 Enquire on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWERS -->
+  <div class="drawer hidden" id="cartDrawer"><div class="drawer-card"><div class="drawer-head"><h3>🛒 Your Cart</h3><button data-close>✕</button></div><div id="cartItems"></div><div class="drawer-foot"><p id="cartTotal"></p><div class="row"><button class="btn secondary" data-close>Continue</button><button class="btn wa" id="checkoutWa">Order on WhatsApp</button></div></div></div></div>
+  <div class="drawer hidden" id="wishDrawer"><div class="drawer-card"><div class="drawer-head"><h3>❤️ Wishlist</h3><button data-close>✕</button></div><div id="wishItems"></div></div></div>
+
+  <nav class="bottom-nav">
+    <a href="#home">🏠<small>Home</small></a>
+    <a href="#shop">👓<small>Shop</small></a>
+    <button id="bnWish">❤️<small>Wishlist</small></button>
+    <button id="bnCart">🛒<small>Cart</small></button>
+    <button id="bnMenu">☰<small>Menu</small></button>
+  </nav>
 
   <div class="toast" id="toast"></div>
   <script src="script.js"></script>
